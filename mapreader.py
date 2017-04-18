@@ -18,11 +18,11 @@ if __name__=="__main__":
 
     T = hp.read_map(filename)
 
-    hp.mollview(T, title='Temperature Map at {0} GHz'.format(freq), unit='K', coord='G',
-            norm='hist')
-    hp.graticule() # add meridians and parallels
-
-    plt.savefig('{0} GHz Temperature Map.pdf'.format(freq))
+#    hp.mollview(T, title='Temperature Map at {0} GHz'.format(freq), unit='K', coord='G',
+#            norm='hist')
+#    hp.graticule() # add meridians and parallels
+#
+#    plt.savefig('{0} GHz Temperature Map.pdf'.format(freq))
 
     # Compute the power spectrum
     LMAX = 2048
