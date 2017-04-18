@@ -10,6 +10,9 @@ from matplotlib.ticker import MultipleLocator, StrMethodFormatter
 import sys
 
 if __name__=="__main__":
+    if len(sys.argv) < 3:
+        sys.exit("Provide the freq and fits filename")
+        
     filename = sys.argv[2]
     freq = sys.argv[1]
 
