@@ -6,6 +6,7 @@ matplotlib.use('Agg')
 
 import matplotlib.pyplot as plt
 import healpy as hp
+import sys
 
 filename = "HFI_SkyMap_100_2048_R2.02_full.fits"
 T = hp.read_map(filename)
