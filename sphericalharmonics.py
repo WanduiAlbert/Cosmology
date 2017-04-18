@@ -3,7 +3,7 @@
 
 import numpy as np
 import matplotlib
-matplotlib.use('TkAgg')
+matplotlib.use('Agg')
 from matplotlib import cm, colors
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt

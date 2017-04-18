@@ -10,7 +10,7 @@ import healpy as hp
 filename = "HFI_SkyMap_100_2048_R2.02_full.fits"
 T = hp.read_map(filename)
 
-hp.mollview(T, title='Temperature Map at 100 GHz', unit='mK', coord='G',
+hp.mollview(T, title='Temperature Map at 100 GHz', unit='K', coord='G',
         norm='hist')
 hp.graticule() # add meridians and parallels
 
@@ -19,7 +19,7 @@ plt.savefig('100 GHz Temperature Map.pdf')
 # Compute the power spectrum
 LMAX = 2048
 cl = hp.anafast(T, lmax=LMAX)
-l = np.arange(LMAX)
+l = np.arange(len(cl))
 
 cl = l * (l + 1)* cl / (2*np.pi)
 
