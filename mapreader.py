@@ -18,7 +18,7 @@ if __name__=="__main__":
             norm='hist')
     hp.graticule() # add meridians and parallels
 
-    plt.savefig('{0} GHz Temperature Map.pdf'.format(fre))
+    plt.savefig('{0} GHz Temperature Map.pdf'.format(freq))
 
     # Compute the power spectrum
     LMAX = 2048
