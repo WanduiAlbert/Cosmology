@@ -33,12 +33,16 @@ if __name__=="__main__":
     Dl *= 1e6 # Let's get the units right. Want it in MicroKelvin
 
     xlabelFormatter = StrMethodFormatter("{x:d}")
+    xticks = [r"{0:d}".format(i) for i in [2, 10, 50, 100, 500, 1000, 1500, 2000]]
+    yticks = [r"{0:d}".format(i) for i in [0, 1000, 2000, 3000, 4000, 5000, 6000]]
     ylabelFormatter = StrMethodFormatter("{x:3.0f}")
     fig, ax = plt.subplots(figsize=(12,12))
     ax.semilogx(l, Dl)
     ax.set_xlabel(r'l')
     ax.set_ylabel(r'$l (l+1) C_l / 2 \pi\ [\mu K^2]$')
-    ax.xaxis.set_major_formatter(xlabelFormatter)
-    ax.yaxis.set_major_formatter(ylabelFormatter)
+    # ax.xaxis.set_major_formatter(xlabelFormatter)
+    ax.set_xticklabels(xticks)
+    ax.set_yticklabels(yticks)
+    # ax.yaxis.set_major_formatter(ylabelFormatter)
 
     plt.savefig('TT Power Spectrum at {0} GHz.pdf'.format(freq))

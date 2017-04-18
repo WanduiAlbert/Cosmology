@@ -284,7 +284,7 @@ mathtext.default : it # The default font to use for math.
 # default face and edge color, default tick sizes,
 # default fontsizes for ticklabels, and so on.  See
 # http://matplotlib.org/api/axes_api.html#module-matplotlib.axes
-axes.hold           : True    # whether to clear the axes by default on
+#axes.hold           : True    # whether to clear the axes by default on
 axes.facecolor      : white   # axes background color
 axes.edgecolor      : black   # axes edge color
 axes.linewidth      : 2.0     # edge linewidth
