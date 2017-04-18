@@ -96,6 +96,54 @@ patch.facecolor        : blue
 patch.edgecolor        : black
 patch.antialiased      : True    # render patches in antialised (no jaggies)
 
+### HATCHES
+#hatch.color     : k
+#hatch.linewidth : 1.0
+
+### Boxplot
+#boxplot.notch       : False
+#boxplot.vertical    : True
+#boxplot.whiskers    : 1.5
+#boxplot.bootstrap   : None
+#boxplot.patchartist : False
+#boxplot.showmeans   : False
+#boxplot.showcaps    : True
+#boxplot.showbox     : True
+#boxplot.showfliers  : True
+#boxplot.meanline    : False
+
+#boxplot.flierprops.color           : 'k'
+#boxplot.flierprops.marker          : 'o'
+#boxplot.flierprops.markerfacecolor : 'none'
+#boxplot.flierprops.markeredgecolor : 'k'
+#boxplot.flierprops.markersize      : 6
+#boxplot.flierprops.linestyle       : 'none'
+#boxplot.flierprops.linewidth       : 1.0
+
+#boxplot.boxprops.color     : 'k'
+#boxplot.boxprops.linewidth : 1.0
+#boxplot.boxprops.linestyle : '-'
+
+#boxplot.whiskerprops.color     : 'k'
+#boxplot.whiskerprops.linewidth : 1.0
+#boxplot.whiskerprops.linestyle : '-'
+
+#boxplot.capprops.color     : 'k'
+#boxplot.capprops.linewidth : 1.0
+#boxplot.capprops.linestyle : '-'
+
+#boxplot.medianprops.color     : 'C1'
+#boxplot.medianprops.linewidth : 1.0
+#boxplot.medianprops.linestyle : '-'
+
+#boxplot.meanprops.color           : 'C2'
+#boxplot.meanprops.marker          : '^'
+#boxplot.meanprops.markerfacecolor : 'C2'
+#boxplot.meanprops.markeredgecolor : 'C2'
+#boxplot.meanprops.markersize      :  6
+#boxplot.meanprops.linestyle       : 'none'
+#boxplot.meanprops.linewidth       : 1.0
+
 ### FONT
 #
 # font properties used by text.Text.  See
@@ -400,7 +448,7 @@ savefig.pad_inches  : 0.1      # Padding to be used when bbox is set to 'tight'
 savefig.jpeg_quality: 95       # when a jpeg is saved, the default quality parameter.
 savefig.directory   : ~        # default directory in savefig dialog box,
                                 # leave empty to always use current working directory
-savefig.transparent : False    # setting that controls whether figures are saved with a 
+#savefig.transparent : False    # setting that controls whether figures are saved with a 
                                 # transparent background by default
 
 # tk backend params

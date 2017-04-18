@@ -25,10 +25,10 @@ if __name__=="__main__":
     cl = hp.anafast(T, lmax=LMAX)
     l = np.arange(len(cl))
 
-    cl = l * (l + 1)* cl / (2*np.pi)
+    Dl = l * (l + 1)* cl / (2*np.pi)
 
     fig, ax = plt.subplots(figsize=(12,12))
-    ax.plot(l, cl)
+    ax.semilogx(l, Dl)
     ax.set_xlabel(r'l')
     ax.set_ylabel(r'$l (l+1) C_l / 2 \pi [\mu K^2]$')
 
