@@ -6,6 +6,7 @@ matplotlib.use('Agg')
 
 import matplotlib.pyplot as plt
 import healpy as hp
+from matplotlib.ticker import MultipleLocator, StrMethodFormatter
 import sys
 
 if __name__=="__main__":
@@ -26,10 +27,15 @@ if __name__=="__main__":
     l = np.arange(len(cl))
 
     Dl = l * (l + 1)* cl / (2*np.pi)
+    Dl *= 1e6 # Let's get the units right. Want it in MicroKelvin
 
+    xlabelFormatter = StrMethodFormatter("{x:d}")
+    ylabelFormatter = StrMethodFormatter("{x:3.0f}")
     fig, ax = plt.subplots(figsize=(12,12))
     ax.semilogx(l, Dl)
     ax.set_xlabel(r'l')
-    ax.set_ylabel(r'$l (l+1) C_l / 2 \pi [\mu K^2]$')
+    ax.set_ylabel(r'$l (l+1) C_l / 2 \pi\ [\mu K^2]$')
+    ax.xaxis.set_major_formatter(xlabelFormatter)
+    ax.yaxis.set_major_formatter(ylabelFormatter)
 
     plt.savefig('TT Power Spectrum at {0} GHz.pdf'.format(freq))
